@@ -1,0 +1,126 @@
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10%;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+.flex-container {
+  display: flex;
+}
+#container a {
+  text-decoration: none;
+}
+.e2,.e3 {
+  color: white;
+}
+.iconemodal {
+  margin-bottom: -5px;
+}
+.alinhado {
+text-align: center;
+}
+#alinhado {
+  text-align: center;
+}
+.custom-radio {
+  --border-width: 0;
+  --inner-border-width: 0;
+  margin: 10px 0;
+}
+
+.radio-wrapper {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.custom-radio[aria-checked="true"] .radio-wrapper {
+  opacity: 1;
+}
+
+.fuel-icon {
+  transition: transform 0.3s ease;
+  margin-right: 8px;
+}
+
+.custom-radio[aria-checked="true"] .fuel-icon {
+  animation: spinAndExplode 0.5s ease-out;
+}
+
+/* Efeito de explosão */
+.radio-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(255,165,0,0.6) 0%, rgba(255,165,0,0) 70%);
+  border-radius: 50%;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  z-index: -1;
+}
+
+.custom-radio[aria-checked="true"] .radio-wrapper::after {
+  animation: explode 0.5s ease-out;
+}
+
+/* Animações */
+@keyframes spinAndExplode {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes explode {
+  0% {
+    transform: translateY(-50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.fuel-icon {
+  margin-right: 10px;
+}
+.calcGasto {
+  text-align: center;
+}
+.combustivelR {
+  margin-top: 10px;
+  text-align: center;
+}
+.resultadocombustivel {
+  font-size: 30px;
+}
